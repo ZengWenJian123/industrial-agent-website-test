@@ -1,0 +1,377 @@
+/* 系统架构页面专用样式 */
+
+/* 页面横幅 */
+.page-hero {
+    padding: 140px 0 60px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.breadcrumb a {
+    color: var(--primary-light);
+    text-decoration: none;
+}
+
+.breadcrumb .separator {
+    color: var(--text-muted);
+}
+
+/* 架构图展示 */
+.architecture-diagram-section {
+    padding: 60px 0;
+}
+
+.diagram-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.diagram-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.diagram-header h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.diagram-content {
+    background: var(--bg-dark);
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    border: 1px solid var(--border-glass);
+}
+
+.architecture-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 核心模块 */
+.modules-section {
+    padding: 100px 0;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.module-card {
+    padding: 32px;
+}
+
+.module-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.module-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.module-badge {
+    display: inline-block;
+    background: var(--gradient-primary);
+    color: var(--text-primary);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.module-card > p {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.module-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 12px;
+    border-left: 3px solid var(--primary);
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--primary-light);
+    font-size: 0.875rem;
+}
+
+.detail-desc {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.detail-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 12px;
+}
+
+.step-num {
+    width: 28px;
+    height: 28px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+.step-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    min-width: 80px;
+}
+
+.step-desc {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.module-tech {
+    font-size: 0.875rem;
+    color: var(--primary-light);
+    background: rgba(99, 102, 241, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* 应用方舱 */
+.applications-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.05) 100%);
+}
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.application-card {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.application-card.featured {
+    border-color: var(--primary);
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: var(--text-dark);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    background: rgba(99, 102, 241, 0.1);
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.app-icon {
+    font-size: 2.5rem;
+}
+
+.app-header h3 {
+    font-size: 1.25rem;
+}
+
+.app-body {
+    padding: 24px;
+}
+
+.app-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.app-row:last-child {
+    border-bottom: none;
+}
+
+.app-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.app-value {
+    color: var(--text-primary);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.app-footer {
+    padding: 20px 24px;
+    background: rgba(99, 102, 241, 0.05);
+    border-top: 1px solid var(--border-glass);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app-feature {
+    font-size: 0.875rem;
+    color: var(--primary-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.app-feature::before {
+    content: '✓';
+    color: #27ca40;
+    font-weight: bold;
+}
+
+/* 架构优势 */
+.advantages-section {
+    padding: 100px 0;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.advantage-item {
+    text-align: center;
+    padding: 32px 24px;
+}
+
+.advantage-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.advantage-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.advantage-item p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* 响应式 */
+@media (max-width: 968px) {
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .applications-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .diagram-container {
+        padding: 20px;
+    }
+    
+    .page-hero {
+        padding: 140px 0 60px;
+    }
+}
+
+/* 科技主题增强 */
+.page-hero,
+.applications-section,
+.cta-section {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(14, 165, 233, 0.12), transparent 28%),
+        linear-gradient(135deg, rgba(248, 251, 255, 0.96) 0%, rgba(239, 246, 255, 0.92) 100%);
+}
+
+.diagram-container,
+.module-card,
+.application-card,
+.detail-intro,
+.advantage-item {
+    border: 1px solid rgba(125, 211, 252, 0.12);
+    box-shadow: 0 18px 42px rgba(37, 99, 235, 0.1);
+}

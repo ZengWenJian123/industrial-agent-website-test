@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统架构 - 工业智能体 AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global-nav.css">
+    <link rel="stylesheet" href="css/architecture.css">
+    <link rel="stylesheet" href="css/architecture-case.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/effects.css">
+</head>
+<body>
+    <!-- 动态渐变背景 -->
+    <div class="dynamic-bg"></div>
+    
+    <!-- 浮动光斑 -->
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+    
+    <!-- 粒子背景画布 -->
+    <canvas id="particles-canvas"></canvas>
+    <div class="gradient-bg">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar-glass">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon-wrapper">
+                    <span class="logo-icon">🤖</span>
+                </div>
+                <div class="logo-content">
+                    <span class="logo-text">工业智能体 AI</span>
+                    <span class="logo-subtitle">INDUSTRIAL AGENT AI</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="architecture.html">系统架构</a></li>
+                <li><a href="industrial-agent.html">什么是工业智能体</a></li>
+                <li><a href="getting-started.html">开始使用</a></li>
+                <li><a href="index.html#contact" class="btn-nav">联系我们</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 页面横幅 -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title gradient-text">系统架构</h1>
+            <p class="page-subtitle">大模型驱动的工业多智能体与数字孪生系统</p>
+            <div class="breadcrumb">
+                <a href="index.html">首页</a>
+                <span class="separator">/</span>
+                <span>系统架构</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 架构图展示 -->
+    <section class="architecture-diagram-section">
+        <div class="container">
+            <div class="diagram-container glass-card">
+                <div class="diagram-header">
+                    <h2>大模型驱动的工业多智能体 (MAS) 与数字孪生系统架构</h2>
+                </div>
+                <div class="diagram-content">
+                    <img src="images/architecture-diagram.jpg" alt="工业多智能体系统架构图" class="architecture-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 架构详解 -->
+    <section class="architecture-detail-section">
+        <div class="container">
+            <div class="detail-intro glass-card">
+                <h2>架构设计理念</h2>
+                <p>本系统采用 <strong>大模型驱动的多智能体 (MAS) 与数字孪生</strong> 融合架构，通过 ISA-95 标准实现工业系统的语义统一，支持预测性维护、柔性生产计划、流程模拟优化等多种工业应用场景。</p>
+                <div class="intro-highlights">
+                    <div class="highlight-box">
+                        <span class="highlight-icon">🎯</span>
+                        <div>
+                            <h4>标准化</h4>
+                            <p>基于 ISA-95 国际标准，确保系统互操作性</p>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <span class="highlight-icon">🔄</span>
+                        <div>
+                            <h4>闭环优化</h4>
+                            <p>四阶段智能推理循环，持续优化生产效率</p>
+                        </div>
+                    </div>
+                    <div class="highlight-box">
+                        <span class="highlight-icon">🛡️</span>
+                        <div>
+                            <h4>安全可控</h4>
+                            <p>HITL 人机回环验证，关键操作人工审阅</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心架构模块 -->
+    <section class="modules-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">核心架构模块</h2>
+                <p class="section-subtitle">六大核心组件构建完整工业智能体系</p>
+            </div>
+
+            <div class="modules-grid">
+                <!-- 模块 1: LLM 多智能体系统 -->
+                <div class="module-card glass-card">
+                    <div class="module-icon">🧠</div>
+                    <h3>LLM 多智能体系统</h3>
+                    <span class="module-badge">系统大脑</span>
+                    <p>基于大语言模型的全局智能决策与规划系统</p>
+                    <div class="module-details">
+                        <div class="detail-item">
+                            <span class="detail-label">管理智能体</span>
+                            <span class="detail-desc">负责全局规划、任务分解与资源调度</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">操作智能体</span>
+                            <span class="detail-desc">负责执行具体动作指令、设备控制</span>
+                        </div>
+                    </div>
+                    <div class="module-tech">LLM • Qwen • GPT • Claude</div>
+                </div>
+
+                <!-- 模块 2: 数字孪生本体 -->
+                <div class="module-card glass-card">
+                    <div class="module-icon">🔗</div>
+                    <h3>数字孪生本体</h3>
+                    <span class="module-badge">语义中介</span>
+                    <p>基于 ISA-95 标准的设备虚拟映射系统</p>
+                    <div class="module-details">
+                        <div class="detail-item">
+                            <span class="detail-label">设备映射</span>
+                            <span class="detail-desc">物理设备→虚拟模型高保真映射</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">逻辑映射</span>
+                            <span class="detail-desc">业务流程→数字逻辑精确转换</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">行动映射</span>
+                            <span class="detail-desc">操作指令→虚拟仿真验证</span>
+                        </div>
+                    </div>
+                    <div class="module-tech">ISA-95 • 数字孪生 • 仿真</div>
+                </div>
+
+                <!-- 模块 3: 本体驱动语义映射 -->
+                <div class="module-card glass-card">
+                    <div class="module-icon">📊</div>
+                    <h3>本体驱动语义映射</h3>
+                    <span class="module-badge">知识图谱</span>
+                    <p>非结构化数据转化为结构化知识图谱</p>
+                    <div class="module-details">
+                        <div class="detail-item">
+                            <span class="detail-label">文档解析</span>
+                            <span class="detail-desc">技术文档、手册结构化提取</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">传感器数据</span>
+                            <span class="detail-desc">实时数据流语义标注与关联</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">关联图谱</span>
+                            <span class="detail-desc">设备 - 部件 - 行动三级关联</span>
+                        </div>
+                    </div>
+                    <div class="module-tech">Ontology • 知识图谱 • NLP</div>
+                </div>
+
+                <!-- 模块 4: 四阶段智能推理 -->
+                <div class="module-card glass-card">
+                    <div class="module-icon">🔄</div>
+                    <h3>四阶段智能推理循环</h3>
+                    <span class="module-badge">闭环工作流</span>
+                    <p>感知→诊断→预测→优化的完整闭环</p>
+                    <div class="module-details">
+                        <div class="detail-step">
+                            <span class="step-num">1</span>
+                            <span class="step-name">感知提取</span>
+                            <span class="step-desc">多源数据采集与特征提取</span>
+                        </div>
+                        <div class="detail-step">
+                            <span class="step-num">2</span>
+                            <span class="step-name">诊断分析</span>
+                            <span class="step-desc">异常检测与根因分析</span>
+                        </div>
+                        <div class="detail-step">
+                            <span class="step-num">3</span>
+                            <span class="step-name">预测优化</span>
+                            <span class="step-desc">趋势预测与参数优化</span>
+                        </div>
+                        <div class="detail-step">
+                            <span class="step-num">4</span>
+                            <span class="step-name">协同调度</span>
+                            <span class="step-desc">多智能体协同任务调度</span>
+                        </div>
+                    </div>
+                    <div class="module-tech">推理引擎 • 机器学习 • 优化算法</div>
+                </div>
+
+                <!-- 模块 5: 人机回环验证 -->
+                <div class="module-card glass-card">
+                    <div class="module-icon">👤</div>
+                    <h3>人机回环 (HITL) 验证</h3>
+                    <span class="module-badge">安全保障</span>
+                    <p>关键操作人工审阅确保安全可追溯</p>
+                    <div class="module-details">
+                        <div class="detail-item">
+                            <span class="detail-label">操作计划生成</span>
+                            <span class="detail-desc">执行前生成详细操作方案</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">人工审阅</span>
+                            <span class="detail-desc">工程师审核确认关键步骤</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">安全追溯</span>
+                            <span class="detail-desc">完整操作日志与审计追踪</span>
+                        </div>
+                    </div>
+                    <div class="module-tech">HITL • 安全审计 • 追溯系统</div>
+                </div>
+
+                <!-- 模块 6: 自动化系统 -->
+                <div class="module-card glass-card">
+                    <div class="module-icon">⚙️</div>
+                    <h3>自动化系统</h3>
+                    <span class="module-badge">感知与执行</span>
+                    <p>通过 UNS 统一命名空间实现物理操作</p>
+                    <div class="module-details">
+                        <div class="detail-item">
+                            <span class="detail-label">UNS 统一命名空间</span>
+                            <span class="detail-desc">全局设备与数据统一标识</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">传感器数据</span>
+                            <span class="detail-desc">实时采集与边缘预处理</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">物理操作</span>
+                            <span class="detail-desc">设备控制与指令执行</span>
+                        </div>
+                    </div>
+                    <div class="module-tech">UNS • MQTT • OPC-UA • PLC</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行业应用案例 -->
+    <section class="industry-case-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">行业应用案例</h2>
+                <p class="section-subtitle">以饮料行业为例，展示架构落地实践</p>
+            </div>
+
+            <div class="case-container">
+                <div class="case-header glass-card">
+                    <div class="case-icon">🥤</div>
+                    <div class="case-title">
+                        <h3>饮料行业智能体解决方案</h3>
+                        <p>基于本架构为某大型饮料企业打造的智能化生产管理系统</p>
+                    </div>
+                </div>
+
+                <div class="case-content">
+                    <!-- 挑战 -->
+                    <div class="case-challenge glass-card">
+                        <div class="case-section-title">
+                            <span class="section-badge">痛点</span>
+                            <h4>客户面临的挑战</h4>
+                        </div>
+                        <div class="challenge-grid">
+                            <div class="challenge-item">
+                                <span class="challenge-icon">⚠️</span>
+                                <div>
+                                    <h5>设备故障频发</h5>
+                                    <p>灌装线设备突发故障导致停产，平均每月损失¥50 万+</p>
+                                </div>
+                            </div>
+                            <div class="challenge-item">
+                                <span class="challenge-icon">📊</span>
+                                <div>
+                                    <h5>生产计划僵化</h5>
+                                    <p>订单变化响应慢，换线调整需 4-6 小时</p>
+                                </div>
+                            </div>
+                            <div class="challenge-item">
+                                <span class="challenge-icon">🔧</span>
+                                <div>
+                                    <h5>工艺参数依赖经验</h5>
+                                    <p>温度、压力等参数设置依赖老师傅经验，新人培训周期长</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 解决方案 -->
+                    <div class="case-solution glass-card">
+                        <div class="case-section-title">
+                            <span class="section-badge">方案</span>
+                            <h4>系统架构解决方案</h4>
+                        </div>
+                        <div class="solution-steps">
+                            <div class="solution-step">
+                                <div class="step-marker">01</div>
+                                <div class="step-detail">
+                                    <h5>部署预测性维护智能体</h5>
+                                    <p>在灌装线、吹瓶机等关键设备部署振动、温度传感器，通过本体驱动语义映射将数据接入数字孪生系统，LLM 多智能体进行异常检测与根因分析</p>
+                                    <div class="step-tech-tags">
+                                        <span class="tech-tag">振动传感器</span>
+                                        <span class="tech-tag">温度监测</span>
+                                        <span class="tech-tag">数字孪生</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="solution-step">
+                                <div class="step-marker">02</div>
+                                <div class="step-detail">
+                                    <h5>实现柔性生产计划智能体</h5>
+                                    <p>管理智能体根据订单需求、设备状态、原材料库存动态编排生产计划，自动调整设备加工时序，换线时间从 4-6 小时降至 1.5 小时</p>
+                                    <div class="step-tech-tags">
+                                        <span class="tech-tag">动态编排</span>
+                                        <span class="tech-tag">资源优化</span>
+                                        <span class="tech-tag">订单管理</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="solution-step">
+                                <div class="step-marker">03</div>
+                                <div class="step-detail">
+                                    <h5>构建工艺参数优化智能体</h5>
+                                    <p>基于历史生产数据和质量检测结果，通过四阶段智能推理循环（感知→诊断→预测→优化）自动推荐最优工艺参数，新人也能快速上手</p>
+                                    <div class="step-tech-tags">
+                                        <span class="tech-tag">参数优化</span>
+                                        <span class="tech-tag">质量预测</span>
+                                        <span class="tech-tag">知识沉淀</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 成效 -->
+                    <div class="case-results glass-card">
+                        <div class="case-section-title">
+                            <span class="section-badge">成效</span>
+                            <h4>实施效果与收益</h4>
+                        </div>
+                        <div class="results-grid">
+                            <div class="result-card">
+                                <div class="result-value">↓73%</div>
+                                <div class="result-label">设备意外停机</div>
+                                <div class="result-desc">预测性维护提前 2-3 天预警故障</div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-value">↓75%</div>
+                                <div class="result-label">换线调整时间</div>
+                                <div class="result-desc">从 4-6 小时降至 1.5 小时</div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-value">↑15%</div>
+                                <div class="result-label">产品合格率</div>
+                                <div class="result-desc">工艺参数优化提升质量稳定性</div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-value">¥600 万/年</div>
+                                <div class="result-label">经济效益</div>
+                                <div class="result-desc">减少停机损失 + 提升生产效率</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据方舱应用 -->
+    <section class="applications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">可选择项目的数据方舱</h2>
+                <p class="section-subtitle">三大典型应用场景，灵活配置快速部署</p>
+            </div>
+
+            <div class="applications-grid">
+                <!-- 预测性维护 -->
+                <div class="application-card glass-card">
+                    <div class="app-header">
+                        <div class="app-icon">🔧</div>
+                        <h3>预测性维护</h3>
+                    </div>
+                    <div class="app-body">
+                        <div class="app-row">
+                            <span class="app-label">任务类型</span>
+                            <span class="app-value">预测性维护</span>
+                        </div>
+                        <div class="app-row">
+                            <span class="app-label">智能体功能</span>
+                            <span class="app-value">诊断与预测智能体</span>
+                        </div>
+                        <div class="app-row">
+                            <span class="app-label">实现目标</span>
+                            <span class="app-value">自动检测异常并生成维修建议</span>
+                        </div>
+                    </div>
+                    <div class="app-footer">
+                        <div class="app-feature">✓ 异常检测</div>
+                        <div class="app-feature">✓ 根因分析</div>
+                        <div class="app-feature">✓ 维修建议</div>
+                    </div>
+                </div>
+
+                <!-- 柔性生产计划 -->
+                <div class="application-card glass-card featured">
+                    <div class="featured-badge">推荐</div>
+                    <div class="app-header">
+                        <div class="app-icon">📋</div>
+                        <h3>柔性生产计划</h3>
+                    </div>
+                    <div class="app-body">
+                        <div class="app-row">
+                            <span class="app-label">任务类型</span>
+                            <span class="app-value">柔性生产计划</span>
+                        </div>
+                        <div class="app-row">
+                            <span class="app-label">智能体功能</span>
+                            <span class="app-value">管理智能体协同</span>
+                        </div>
+                        <div class="app-row">
+                            <span class="app-label">实现目标</span>
+                            <span class="app-value">根据订单需求动态编排设备加工时序</span>
+                        </div>
+                    </div>
+                    <div class="app-footer">
+                        <div class="app-feature">✓ 订单管理</div>
+                        <div class="app-feature">✓ 动态编排</div>
+                        <div class="app-feature">✓ 资源优化</div>
+                    </div>
+                </div>
+
+                <!-- 流程模拟优化 -->
+                <div class="application-card glass-card">
+                    <div class="app-header">
+                        <div class="app-icon">📈</div>
+                        <h3>流程模拟优化</h3>
+                    </div>
+                    <div class="app-body">
+                        <div class="app-row">
+                            <span class="app-label">任务类型</span>
+                            <span class="app-value">流程模拟优化</span>
+                        </div>
+                        <div class="app-row">
+                            <span class="app-label">智能体功能</span>
+                            <span class="app-value">仿真交互智能体</span>
+                        </div>
+                        <div class="app-row">
+                            <span class="app-label">实现目标</span>
+                            <span class="app-value">在线闭环环境中评估参数设置以降低试错成本</span>
+                        </div>
+                    </div>
+                    <div class="app-footer">
+                        <div class="app-feature">✓ 流程仿真</div>
+                        <div class="app-feature">✓ 参数优化</div>
+                        <div class="app-feature">✓ 成本降低</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术优势 -->
+    <section class="advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">架构优势</h2>
+                <p class="section-subtitle">为什么选择我们的系统架构</p>
+            </div>
+
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-icon">🎯</div>
+                    <h3>标准化</h3>
+                    <p>基于 ISA-95 国际标准，确保系统互操作性与可扩展性</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">🔄</div>
+                    <h3>闭环优化</h3>
+                    <p>四阶段智能推理循环，持续优化生产效率与质量</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">🛡️</div>
+                    <h3>安全可控</h3>
+                    <p>HITL 人机回环验证，关键操作人工审阅确保安全</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">🔗</div>
+                    <h3>语义统一</h3>
+                    <p>本体驱动语义映射，打破数据孤岛实现知识融合</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">⚡</div>
+                    <h3>实时响应</h3>
+                    <p>UNS 统一命名空间，毫秒级数据采集与指令执行</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">🧩</div>
+                    <h3>灵活配置</h3>
+                    <p>数据方舱模块化设计，根据场景快速组合部署</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>准备好构建您的工业智能系统了吗？</h2>
+                <p>联系我们，获取定制化架构设计与实施方案。</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary btn-glow">
+                        <span>联系我们</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="getting-started.html" class="btn btn-secondary">
+                        <span>开始使用</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer-glass">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>工业智能体 AI</h4>
+                    <p>驱动工业自动化的未来</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">💬</a>
+                        <a href="#" class="social-icon">📱</a>
+                        <a href="#" class="social-icon">🌐</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="architecture.html">系统架构</a></li>
+                        <li><a href="industrial-agent.html">什么是工业智能体</a></li>
+                        <li><a href="getting-started.html">开始使用</a></li>
+                        <li><a href="index.html#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>技术支持</h4>
+                    <ul>
+                        <li><a href="#">文档中心</a></li>
+                        <li><a href="#">API 参考</a></li>
+                        <li><a href="https://github.com/ClawDeckX/ClawDeckX" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 中科华芯（东莞）有限公司。保留所有权利.</p>
+                <p class="footer-tech">Powered by <a href="http://192.168.10.231:18800" target="_blank">ClawDeckX</a> + LLM + Open Source Tools</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/global-nav.js"></script>
+    <script src="js/effects.js"></script>
+</body>
+</html>

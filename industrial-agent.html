@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>什么是工业智能体 - 工业智能体 AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global-nav.css">
+    <link rel="stylesheet" href="css/ia-page.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/effects.css">
+</head>
+<body>
+    <div class="dynamic-bg"></div>
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+    <!-- 粒子背景画布 -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar-glass">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon-wrapper">
+                    <span class="logo-icon">🤖</span>
+                </div>
+                <div class="logo-content">
+                    <span class="logo-text">工业智能体 AI</span>
+                    <span class="logo-subtitle">INDUSTRIAL AGENT AI</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="architecture.html">系统架构</a></li>
+                <li><a href="industrial-agent.html">什么是工业智能体</a></li>
+                <li><a href="getting-started.html">开始使用</a></li>
+                <li><a href="index.html#contact" class="btn-nav">联系我们</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 页面横幅 -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">什么是工业智能体？</h1>
+            <p class="page-subtitle">AI 驱动的新一代工业自动化系统</p>
+            <div class="breadcrumb">
+                <a href="index.html">首页</a>
+                <span class="separator">/</span>
+                <span>什么是工业智能体</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 定义介绍 -->
+    <section class="definition-section">
+        <div class="container">
+            <div class="definition-content">
+                <div class="definition-card">
+                    <div class="def-icon">🤖</div>
+                    <h2>工业智能体 (Industrial Agent)</h2>
+                    <p class="def-text">
+                        工业智能体是一种<strong>基于人工智能的自主系统</strong>，能够感知工业环境、理解生产数据、
+                        做出智能决策并执行自动化任务。它融合了<strong>大语言模型 (LLM)</strong>、
+                        <strong>传感器技术</strong>、<strong>边缘计算</strong>和<strong>工作流自动化</strong>，
+                        实现从数据采集到智能决策的完整闭环。
+                    </p>
+                </div>
+                
+                <div class="key-concepts">
+                    <div class="concept-item">
+                        <div class="concept-icon">🧠</div>
+                        <h3>智能感知</h3>
+                        <p>通过传感器网络实时采集工业数据</p>
+                    </div>
+                    <div class="concept-item">
+                        <div class="concept-icon">💭</div>
+                        <h3>认知理解</h3>
+                        <p>利用 LLM 理解数据含义和业务上下文</p>
+                    </div>
+                    <div class="concept-item">
+                        <div class="concept-icon">⚡</div>
+                        <h3>自主决策</h3>
+                        <p>基于规则和 AI 模型自动做出决策</p>
+                    </div>
+                    <div class="concept-item">
+                        <div class="concept-icon">🔄</div>
+                        <h3>自动执行</h3>
+                        <p>通过工作流引擎执行自动化任务</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心特征 -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">工业智能体的核心特征</h2>
+            <p class="section-desc">与传统自动化系统的本质区别</p>
+            
+            <div class="feature-comparison">
+                <div class="comparison-card traditional">
+                    <div class="card-header">
+                        <div class="card-icon">⚙️</div>
+                        <h3>传统自动化</h3>
+                    </div>
+                    <ul class="feature-list">
+                        <li>❌ 基于固定规则，缺乏灵活性</li>
+                        <li>❌ 无法理解上下文和语义</li>
+                        <li>❌ 需要人工编程和配置</li>
+                        <li>❌ 难以应对异常情况</li>
+                        <li>❌ 数据孤岛，缺乏协同</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card modern">
+                    <div class="card-header">
+                        <div class="card-icon">🚀</div>
+                        <h3>工业智能体</h3>
+                        <span class="new-badge">新一代</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li>✅ 基于 AI 模型，自适应学习</li>
+                        <li>✅ 理解自然语言和业务语义</li>
+                        <li>✅ 支持自然语言交互配置</li>
+                        <li>✅ 智能异常检测和处理</li>
+                        <li>✅ 跨系统数据融合与协同</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术架构 -->
+    <section class="architecture-section">
+        <div class="container">
+            <h2 class="section-title">技术架构</h2>
+            <p class="section-desc">四层架构实现完整的智能自动化</p>
+            
+            <div class="architecture-layers">
+                <div class="layer layer-1">
+                    <div class="layer-number">01</div>
+                    <div class="layer-content">
+                        <h3>感知层</h3>
+                        <p>数据采集与设备连接</p>
+                        <div class="layer-tech">
+                            <span>传感器</span>
+                            <span>PLC</span>
+                            <span>SCADA</span>
+                            <span>MQTT</span>
+                            <span>OPC-UA</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="layer-connector">↓</div>
+                
+                <div class="layer layer-2">
+                    <div class="layer-number">02</div>
+                    <div class="layer-content">
+                        <h3>边缘层</h3>
+                        <p>本地计算与实时响应</p>
+                        <div class="layer-tech">
+                            <span>边缘计算</span>
+                            <span>数据预处理</span>
+                            <span>实时推理</span>
+                            <span>本地缓存</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="layer-connector">↓</div>
+                
+                <div class="layer layer-3">
+                    <div class="layer-number">03</div>
+                    <div class="layer-content">
+                        <h3>认知层</h3>
+                        <p>AI 理解与智能决策</p>
+                        <div class="layer-tech">
+                            <span>大语言模型</span>
+                            <span>知识图谱</span>
+                            <span>推理引擎</span>
+                            <span>决策优化</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="layer-connector">↓</div>
+                
+                <div class="layer layer-4">
+                    <div class="layer-number">04</div>
+                    <div class="layer-content">
+                        <h3>执行层</h3>
+                        <p>工作流编排与任务执行</p>
+                        <div class="layer-tech">
+                            <span>工作流引擎</span>
+                            <span>API 集成</span>
+                            <span>自动化脚本</span>
+                            <span>反馈循环</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用场景 -->
+    <section class="scenarios-section">
+        <div class="container">
+            <h2 class="section-title">典型应用场景</h2>
+            <p class="section-desc">工业智能体在各行业的落地实践</p>
+            
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <div class="scenario-icon">🏭</div>
+                    <h3>智能制造</h3>
+                    <ul class="scenario-list">
+                        <li>• 设备预测性维护</li>
+                        <li>• 生产质量监控</li>
+                        <li>• 工艺参数优化</li>
+                        <li>• 能耗管理与优化</li>
+                    </ul>
+                </div>
+                
+                <div class="scenario-card">
+                    <div class="scenario-icon">🌡️</div>
+                    <h3>环境监测</h3>
+                    <ul class="scenario-list">
+                        <li>• 空气质量实时监测</li>
+                        <li>• 污染源追踪分析</li>
+                        <li>• 异常排放预警</li>
+                        <li>• 环保合规报告</li>
+                    </ul>
+                </div>
+                
+                <div class="scenario-card">
+                    <div class="scenario-icon">⚡</div>
+                    <h3>能源管理</h3>
+                    <ul class="scenario-list">
+                        <li>• 用电负荷预测</li>
+                        <li>• 设备能耗分析</li>
+                        <li>• 节能策略推荐</li>
+                        <li>• 碳排放监控</li>
+                    </ul>
+                </div>
+                
+                <div class="scenario-card">
+                    <div class="scenario-icon">🚚</div>
+                    <h3>供应链优化</h3>
+                    <ul class="scenario-list">
+                        <li>• 库存智能预测</li>
+                        <li>• 物流路径优化</li>
+                        <li>• 供应商风险评估</li>
+                        <li>• 需求波动响应</li>
+                    </ul>
+                </div>
+                
+                <div class="scenario-card">
+                    <div class="scenario-icon">🔧</div>
+                    <h3>设备运维</h3>
+                    <ul class="scenario-list">
+                        <li>• 故障诊断与定位</li>
+                        <li>• 维修工单自动生成</li>
+                        <li>• 备件库存管理</li>
+                        <li>• 维护计划优化</li>
+                    </ul>
+                </div>
+                
+                <div class="scenario-card">
+                    <div class="scenario-icon">📊</div>
+                    <h3>数据分析</h3>
+                    <ul class="scenario-list">
+                        <li>• 多维度数据聚合</li>
+                        <li>• 趋势预测分析</li>
+                        <li>• 异常模式识别</li>
+                        <li>• 智能报表生成</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心价值 -->
+    <section class="value-section">
+        <div class="container">
+            <h2 class="section-title">核心价值</h2>
+            <p class="section-desc">工业智能体为企业带来的实际收益</p>
+            
+            <div class="value-cards">
+                <div class="value-card">
+                    <div class="value-icon">💰</div>
+                    <h3>降低成本</h3>
+                    <p class="value-desc">减少人工干预，降低运营成本</p>
+                    <div class="value-stat">
+                        <span class="stat-value">30-50%</span>
+                        <span class="stat-label">人力成本节省</span>
+                    </div>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h3>提升效率</h3>
+                    <p class="value-desc">自动化流程，加速业务响应</p>
+                    <div class="value-stat">
+                        <span class="stat-value">5-10x</span>
+                        <span class="stat-label">处理效率提升</span>
+                    </div>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>提高质量</h3>
+                    <p class="value-desc">智能监控，减少人为错误</p>
+                    <div class="value-stat">
+                        <span class="stat-value">99%+</span>
+                        <span class="stat-label">准确率提升</span>
+                    </div>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🔮</div>
+                    <h3>预测能力</h3>
+                    <p class="value-desc">提前预警，避免意外损失</p>
+                    <div class="value-stat">
+                        <span class="stat-value">70-90%</span>
+                        <span class="stat-label">故障预测准确率</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作流程示例 -->
+    <section class="workflow-example">
+        <div class="container">
+            <h2 class="section-title">工作流程示例</h2>
+            <p class="section-desc">以设备异常检测为例</p>
+            
+            <div class="workflow-steps">
+                <div class="workflow-step-detail">
+                    <div class="step-badge">步骤 1</div>
+                    <h3>数据采集</h3>
+                    <p>温度传感器实时监测设备温度，数据通过 MQTT 协议上传至边缘网关</p>
+                    <div class="step-detail">
+                        <code>温度：85°C → 92°C → 98°C (异常)</code>
+                    </div>
+                </div>
+                
+                <div class="workflow-arrow">↓</div>
+                
+                <div class="workflow-step-detail">
+                    <div class="step-badge">步骤 2</div>
+                    <h3>智能分析</h3>
+                    <p>边缘计算节点进行数据预处理，AI 模型识别温度异常模式</p>
+                    <div class="step-detail">
+                        <code>AI 判断：温度上升趋势异常，可能故障</code>
+                    </div>
+                </div>
+                
+                <div class="workflow-arrow">↓</div>
+                
+                <div class="workflow-step-detail">
+                    <div class="step-badge">步骤 3</div>
+                    <h3>决策生成</h3>
+                    <p>LLM 根据知识库生成诊断建议和维护方案</p>
+                    <div class="step-detail">
+                        <code>建议：检查冷却系统，安排预防性维护</code>
+                    </div>
+                </div>
+                
+                <div class="workflow-arrow">↓</div>
+                
+                <div class="workflow-step-detail">
+                    <div class="step-badge">步骤 4</div>
+                    <h3>自动执行</h3>
+                    <p>工作流引擎自动创建工单、通知相关人员、记录事件</p>
+                    <div class="step-detail">
+                        <code>✓ 工单创建 ✓ 邮件通知 ✓ 短信提醒</code>
+                    </div>
+                </div>
+                
+                <div class="workflow-arrow">↓</div>
+                
+                <div class="workflow-step-detail">
+                    <div class="step-badge">步骤 5</div>
+                    <h3>反馈优化</h3>
+                    <p>收集处理结果，优化 AI 模型和工作流规则</p>
+                    <div class="step-detail">
+                        <code>模型更新：异常检测准确率提升至 95%</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术栈 -->
+    <section class="tech-stack-section">
+        <div class="container">
+            <h2 class="section-title">技术栈</h2>
+            <p class="section-desc">构建工业智能体的核心技术</p>
+            
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>🧠 AI 与大模型</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">Qwen</span>
+                        <span class="tech-item">GPT-4</span>
+                        <span class="tech-item">Claude</span>
+                        <span class="tech-item">本地 LLM</span>
+                        <span class="tech-item">Embedding 模型</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>⚙️ 工作流引擎</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">n8n</span>
+                        <span class="tech-item">Node-RED</span>
+                        <span class="tech-item">Apache Airflow</span>
+                        <span class="tech-item">Camunda</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>📡 IoT 与通信</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">MQTT</span>
+                        <span class="tech-item">OPC-UA</span>
+                        <span class="tech-item">Modbus</span>
+                        <span class="tech-item">HTTP/REST</span>
+                        <span class="tech-item">WebSocket</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>📊 数据与可视化</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">Grafana</span>
+                        <span class="tech-item">InfluxDB</span>
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item">Redis</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>🐳 部署与运维</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">Docker</span>
+                        <span class="tech-item">Kubernetes</span>
+                        <span class="tech-item">Prometheus</span>
+                        <span class="tech-item">GitLab CI/CD</span>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3>🔒 安全与合规</h3>
+                    <div class="tech-items">
+                        <span class="tech-item">OAuth 2.0</span>
+                        <span class="tech-item">JWT</span>
+                        <span class="tech-item">TLS/SSL</span>
+                        <span class="tech-item">审计日志</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+            <p class="section-desc">关于工业智能体的常见疑问</p>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">❓</span>
+                        <h3>工业智能体与传统 SCADA 系统有什么区别？</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SCADA 系统主要侧重于数据采集和监控，需要人工配置规则和响应策略。工业智能体在此基础上增加了 AI 认知能力，能够理解数据语义、自主决策、自然语言交互，并支持自学习和持续优化。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">❓</span>
+                        <h3>部署工业智能体需要什么样的基础设施？</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>基础部署需要：1) 传感器和数据采集设备；2) 边缘计算节点（可以是工业网关或小型服务器）；3) 网络连接（有线或无线）；4) 云端或本地 AI 模型服务。我们提供灵活的部署方案，可根据实际需求选择本地、云端或混合部署。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">❓</span>
+                        <h3>工业智能体的安全性如何保障？</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>我们采用多层安全保障：数据传输加密 (TLS/SSL)、身份认证 (OAuth 2.0/JWT)、访问控制 (RBAC)、操作审计日志、数据隔离等。敏感数据可选择本地处理，符合数据主权和隐私保护要求。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">❓</span>
+                        <h3>如何与现有系统集成？</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>工业智能体支持多种集成方式：1) 标准工业协议 (MQTT、OPC-UA、Modbus)；2) RESTful API；3) 数据库直连；4) 消息队列 (Kafka、RabbitMQ)。我们提供预置连接器，可快速对接主流工业系统和云平台。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">❓</span>
+                        <h3>实施周期和成本如何？</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>基于开源工具链和预置模板，基础部署可在数小时内完成。具体周期取决于场景复杂度：简单场景 1-2 周，中等复杂度 2-4 周，大型项目 1-3 个月。成本方面，开源方案大幅降低软件许可费用，主要投入在硬件设备和实施服务。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>准备好开始您的工业智能化之旅了吗？</h2>
+                <p>联系我们，获取定制化解决方案和演示预约。</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">联系我们</a>
+                    <a href="index.html" class="btn btn-secondary">返回首页</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer-glass">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>工业智能体 AI</h4>
+                    <p>驱动工业自动化的未来</p>
+                    <div class="footer-desc">
+                        基于大语言模型与开源工具链，<br>构建可落地的工业智能工作流系统
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="architecture.html">系统架构</a></li>
+                        <li><a href="industrial-agent.html">什么是工业智能体</a></li>
+                        <li><a href="getting-started.html">开始使用</a></li>
+                        <li><a href="index.html#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>技术支持</h4>
+                    <ul>
+                        <li><a href="#">文档中心</a></li>
+                        <li><a href="#">API 参考</a></li>
+                        <li><a href="https://github.com/ClawDeckX/ClawDeckX" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 中科华芯（东莞）有限公司。保留所有权利.</p>
+                <p class="footer-tech">Powered by <a href="http://192.168.10.231:18800" target="_blank">ClawDeckX</a> + LLM + Open Source Tools</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/global-nav.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/ia-page.js"></script>
+</body>
+</html>

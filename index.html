@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工业智能体 AI - 驱动工业自动化的未来</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global-nav.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/effects.css">
+</head>
+<body>
+    <!-- 动态渐变背景 -->
+    <div class="dynamic-bg"></div>
+    
+    <!-- 浮动光斑 -->
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+    
+    <!-- 粒子背景画布 -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 导航栏 -->
+    <nav class="navbar-glass">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon-wrapper">
+                    <span class="logo-icon">🤖</span>
+                </div>
+                <div class="logo-content">
+                    <span class="logo-text">工业智能体 AI</span>
+                    <span class="logo-subtitle">INDUSTRIAL AGENT AI</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="architecture.html">系统架构</a></li>
+                <li><a href="industrial-agent.html">什么是工业智能体</a></li>
+                <li><a href="getting-started.html">开始使用</a></li>
+                <li><a href="#contact" class="btn-nav">联系我们</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主页横幅 -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>2026 全新发布</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="gradient-text">AI 驱动的</span><br>
+                    <span class="gradient-text highlight">工业自动化新范式</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    基于大语言模型与开源工具链，构建可落地的工业智能工作流系统
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#features" class="btn btn-primary btn-glow">
+                        <span>探索功能</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="getting-started.html" class="btn btn-secondary">
+                        <span>开始使用</span>
+                    </a>
+                </div>
+                
+                <!-- 统计数据 -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="50">0</div>
+                        <div class="stat-label">目标客户</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="3">0</div>
+                        <div class="stat-label">产品线</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="200">0</div>
+                        <div class="stat-label">案例库</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="99">0</div>
+                        <div class="stat-label">自动化率</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 终端展示 -->
+            <div class="hero-terminal">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">bash — agent-cli</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">industrial-agent init</span>
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="success">✓</span> 初始化工业智能体环境...
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">agent deploy --model qwen-plus</span>
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="success">✓</span> 连接大语言模型...
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="success">✓</span> 加载工作流引擎...
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="success">✓</span> 智能体已就绪
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="cursor">█</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特性卡片 -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">核心能力</h2>
+                <p class="section-subtitle">六大技术支柱，构建完整工业智能体系</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <div class="card-icon">🧠</div>
+                    <h3>大语言模型集成</h3>
+                    <p>利用先进的 LLM 技术实现自然语言交互、智能决策和自动化任务执行</p>
+                    <div class="card-tech">Qwen • GPT • Claude</div>
+                </div>
+                
+                <div class="feature-card glass-card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>开源工具链</h3>
+                    <p>基于成熟的开源生态构建灵活、可扩展的工业自动化解决方案</p>
+                    <div class="card-tech">n8n • Node-RED • Home Assistant</div>
+                </div>
+                
+                <div class="feature-card glass-card">
+                    <div class="card-icon">🔄</div>
+                    <h3>工作流引擎</h3>
+                    <p>可视化工作流编排，支持复杂业务流程的自动化执行与监控</p>
+                    <div class="card-tech">BPMN • 可视化编排</div>
+                </div>
+                
+                <div class="feature-card glass-card">
+                    <div class="card-icon">📈</div>
+                    <h3>数据处理管道</h3>
+                    <p>高效的数据采集、清洗、分析和可视化，实现数据驱动的决策</p>
+                    <div class="card-tech">ETL • 实时流处理</div>
+                </div>
+                
+                <div class="feature-card glass-card">
+                    <div class="card-icon">🌐</div>
+                    <h3>云地协同部署</h3>
+                    <p>灵活的部署策略，支持本地私有化部署与云端服务的无缝协同</p>
+                    <div class="card-tech">Docker • K8s • 边缘计算</div>
+                </div>
+                
+                <div class="feature-card glass-card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>安全与合规</h3>
+                    <p>企业级安全保障，符合工业数据安全和隐私保护要求</p>
+                    <div class="card-tech">加密 • 审计 • 权限控制</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 截图轮播 -->
+    <section class="showcase-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">产品预览</h2>
+                <p class="section-subtitle">直观感受工业智能体的强大能力</p>
+            </div>
+            
+            <div class="showcase-carousel">
+                <div class="carousel-track">
+                    <div class="showcase-card glass-card">
+                        <div class="showcase-image">
+                            <div class="image-placeholder">
+                                <span>📊</span>
+                                <p>实时监控仪表盘</p>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <h3>实时监控</h3>
+                            <p>设备状态、生产数据、告警信息一目了然</p>
+                        </div>
+                    </div>
+                    
+                    <div class="showcase-card glass-card">
+                        <div class="showcase-image">
+                            <div class="image-placeholder">
+                                <span>🔗</span>
+                                <p>工作流编排界面</p>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <h3>工作流编排</h3>
+                            <p>拖拽式界面，轻松构建复杂业务流程</p>
+                        </div>
+                    </div>
+                    
+                    <div class="showcase-card glass-card">
+                        <div class="showcase-image">
+                            <div class="image-placeholder">
+                                <span>🤖</span>
+                                <p>AI 智能体配置</p>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <h3>智能体配置</h3>
+                            <p>自定义 AI 代理人设，适配不同工业场景</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作流程 -->
+    <section class="workflow-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">工作流程</h2>
+                <p class="section-subtitle">从数据到智能决策的完整闭环</p>
+            </div>
+            
+            <div class="workflow-steps">
+                <div class="workflow-step glass-card">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>数据采集</h3>
+                        <p>从工业设备、传感器和系统中采集实时数据</p>
+                        <div class="step-tech">MQTT • OPC-UA • Modbus</div>
+                    </div>
+                </div>
+                
+                <div class="workflow-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-arrow">↓</div>
+                </div>
+                
+                <div class="workflow-step glass-card">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>智能处理</h3>
+                        <p>利用 LLM 进行数据理解、分类和智能分析</p>
+                        <div class="step-tech">NLP • 语义理解 • 意图识别</div>
+                    </div>
+                </div>
+                
+                <div class="workflow-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-arrow">↓</div>
+                </div>
+                
+                <div class="workflow-step glass-card">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>自动执行</h3>
+                        <p>基于规则和业务逻辑自动化执行任务流程</p>
+                        <div class="step-tech">工作流引擎 • API 集成</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">联系我们</h2>
+                <p class="section-subtitle">期待与您合作，共创工业智能未来</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info glass-card">
+                    <h3>联系方式</h3>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <span class="item-icon">📧</span>
+                            <div>
+                                <span class="item-label">邮箱</span>
+                                <span class="item-value">contact@industrial-agent.ai</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="item-icon">📍</span>
+                            <div>
+                                <span class="item-label">地址</span>
+                                <span class="item-value">广东东莞松山湖</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="item-icon">🏢</span>
+                            <div>
+                                <span class="item-label">公司</span>
+                                <span class="item-value">中科华芯（东莞）有限公司</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form glass-card">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="公司名称">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="您的需求或问题" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-glow btn-full">
+                            <span>发送消息</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer-glass">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>工业智能体 AI</h4>
+                    <p>驱动工业自动化的未来</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">💬</a>
+                        <a href="#" class="social-icon">📱</a>
+                        <a href="#" class="social-icon">🌐</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="industrial-agent.html">什么是工业智能体</a></li>
+                        <li><a href="getting-started.html">开始使用</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>技术支持</h4>
+                    <ul>
+                        <li><a href="#">文档中心</a></li>
+                        <li><a href="#">API 参考</a></li>
+                        <li><a href="https://github.com/ClawDeckX/ClawDeckX" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 中科华芯（东莞）有限公司。保留所有权利.</p>
+                <p class="footer-tech">Powered by <a href="http://192.168.10.231:18800" target="_blank">ClawDeckX</a> + LLM + Open Source Tools</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/global-nav.js"></script>
+    <script src="js/effects.js"></script>
+</body>
+</html>

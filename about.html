@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 工业智能体 AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global-nav.css">
+    <link rel="stylesheet" href="css/about-page.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/effects.css">
+</head>
+<body>
+    <div class="dynamic-bg"></div>
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+    <!-- 粒子背景画布 -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar-glass">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon-wrapper">
+                    <span class="logo-icon">🤖</span>
+                </div>
+                <div class="logo-content">
+                    <span class="logo-text">工业智能体 AI</span>
+                    <span class="logo-subtitle">INDUSTRIAL AGENT AI</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="architecture.html">系统架构</a></li>
+                <li><a href="industrial-agent.html">什么是工业智能体</a></li>
+                <li><a href="getting-started.html">开始使用</a></li>
+                <li><a href="index.html#contact" class="btn-nav">联系我们</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 页面横幅 -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">关于我们</h1>
+            <p class="page-subtitle">连接产学研，驱动工业智能化转型</p>
+            <div class="breadcrumb">
+                <a href="index.html">首页</a>
+                <span class="separator">/</span>
+                <span>关于我们</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 组织架构 -->
+    <section class="org-structure">
+        <div class="container">
+            <div class="structure-intro">
+                <h2 class="section-title">产学研一体化创新体系</h2>
+                <p class="section-desc">我们构建了从基础研究到产业应用的完整创新链条</p>
+            </div>
+            
+            <div class="org-cards">
+                <div class="org-card primary">
+                    <div class="org-icon">🏢</div>
+                    <h3>中科华芯（东莞）有限公司</h3>
+                    <p class="org-role">产业化平台</p>
+                    <p class="org-desc">负责技术转化、产品开发与市场推广</p>
+                </div>
+                
+                <div class="org-arrow">→</div>
+                
+                <div class="org-card">
+                    <div class="org-icon">🔬</div>
+                    <h3>松山湖材料实验室</h3>
+                    <p class="org-role">基础研究</p>
+                    <p class="org-desc">前沿材料科学与传感器技术研究</p>
+                </div>
+                
+                <div class="org-arrow">→</div>
+                
+                <div class="org-card">
+                    <div class="org-icon">⚙️</div>
+                    <h3>大湾区智能传感器工程中心</h3>
+                    <p class="org-role">工程化研发</p>
+                    <p class="org-desc">传感器系统集成与工程应用开发</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 中科华芯介绍 -->
+    <section class="company-section">
+        <div class="container">
+            <div class="company-content">
+                <div class="company-text">
+                    <div class="section-label">运营主体</div>
+                    <h2 class="section-title">中科华芯（东莞）有限公司</h2>
+                    <p class="lead">专注于 AI 驱动的工业自动化解决方案，致力于将前沿 AI 技术与工业场景深度融合。</p>
+                    
+                    <div class="company-info">
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <h4>公司位置</h4>
+                                <p>广东东莞松山湖高新技术产业开发区</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">👥</div>
+                            <div>
+                                <h4>团队规模</h4>
+                                <p>50 人专业团队，2026 年目标 65 人</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">🎯</div>
+                            <div>
+                                <h4>2026 年目标</h4>
+                                <p>营收¥5000 万，服务 50+ 客户</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="business-areas">
+                        <h3>三大核心业务</h3>
+                        <div class="business-grid">
+                            <div class="business-item">
+                                <div class="business-icon">🧠</div>
+                                <h4>Physics AI</h4>
+                                <p>传感器端侧算力的 AI 应用，实现边缘智能决策</p>
+                            </div>
+                            <div class="business-item">
+                                <div class="business-icon">📱</div>
+                                <h4>钉钉智能硬件</h4>
+                                <p>联合阿里钉钉研发智能硬件，打造企业级 IoT 解决方案</p>
+                            </div>
+                            <div class="business-item">
+                                <div class="business-icon">🏭</div>
+                                <h4>工业智能体</h4>
+                                <p>基于传感器供应链的商业化，构建 AI 驱动的工业自动化系统</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="company-visual">
+                    <div class="visual-card">
+                        <div class="visual-stat">
+                            <div class="stat-number">50</div>
+                            <div class="stat-label">团队成员</div>
+                        </div>
+                        <div class="visual-stat">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">核心业务</div>
+                        </div>
+                        <div class="visual-stat">
+                            <div class="stat-number">5000 万</div>
+                            <div class="stat-label">2026 营收目标</div>
+                        </div>
+                        <div class="visual-stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">目标客户</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 松山湖材料实验室 -->
+    <section class="lab-section">
+        <div class="container">
+            <div class="lab-content">
+                <div class="lab-visual">
+                    <div class="lab-badge">基础研究基地</div>
+                    <div class="lab-image-placeholder">
+                        <div class="lab-icon">🔬</div>
+                        <p>松山湖材料实验室</p>
+                    </div>
+                </div>
+                
+                <div class="lab-text">
+                    <div class="section-label">研究支撑</div>
+                    <h2 class="section-title">松山湖材料实验室</h2>
+                    <p class="lead">广东省首批建设的省级实验室之一，聚焦新材料前沿研究与产业化应用。</p>
+                    
+                    <div class="lab-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-dot"></span>
+                            <div>
+                                <h4>高水平研究平台</h4>
+                                <p>汇聚国内外顶尖科学家，开展前沿材料科学研究</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-dot"></span>
+                            <div>
+                                <h4>传感器技术研究方向</h4>
+                                <p>新型敏感材料、微纳传感器、智能传感系统</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-dot"></span>
+                            <div>
+                                <h4>产学研协同创新</h4>
+                                <p>与中科华芯深度合作，推动研究成果产业化</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-dot"></span>
+                            <div>
+                                <h4>知识库支撑</h4>
+                                <p>提供 161+ 传感器案例、10+ 学术论文的技术基础</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 大湾区智能传感器工程中心 -->
+    <section class="center-section">
+        <div class="container">
+            <div class="center-content">
+                <div class="center-text">
+                    <div class="section-label">工程化平台</div>
+                    <h2 class="section-title">大湾区智能传感器工程中心</h2>
+                    <p class="lead">依托松山湖材料实验室，专注传感器系统集成与工程应用开发。</p>
+                    
+                    <div class="center-capabilities">
+                        <h3>核心能力</h3>
+                        <div class="capabilities-grid">
+                            <div class="capability-card">
+                                <div class="capability-icon">🔧</div>
+                                <h4>系统集成</h4>
+                                <p>多传感器融合、数据采集与处理</p>
+                            </div>
+                            <div class="capability-card">
+                                <div class="capability-icon">💻</div>
+                                <h4>边缘计算</h4>
+                                <p>端侧 AI 推理、实时决策处理</p>
+                            </div>
+                            <div class="capability-card">
+                                <div class="capability-icon">🌐</div>
+                                <h4>工业通信</h4>
+                                <p>MQTT、OPC-UA、Modbus 协议支持</p>
+                            </div>
+                            <div class="capability-card">
+                                <div class="capability-icon">📊</div>
+                                <h4>数据可视化</h4>
+                                <p>实时监控、仪表盘、报表生成</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="center-achievements">
+                        <div class="achievement-item">
+                            <div class="achievement-number">161</div>
+                            <div class="achievement-label">传感器应用案例</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number">10</div>
+                            <div class="achievement-label">学术论文支撑</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number">8</div>
+                            <div class="achievement-label">v2 模板案例</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-number">179</div>
+                            <div class="achievement-label">知识库文档</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="center-visual">
+                    <div class="tech-stack">
+                        <h4>技术栈</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">传感器技术</span>
+                            <span class="tech-tag">AI 大模型</span>
+                            <span class="tech-tag">边缘计算</span>
+                            <span class="tech-tag">IoT 通信</span>
+                            <span class="tech-tag">数据可视化</span>
+                            <span class="tech-tag">工作流引擎</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作优势 -->
+    <section class="advantages-section">
+        <div class="container">
+            <h2 class="section-title">产学研合作优势</h2>
+            <p class="section-desc">三方协同，构建从研究到产业的完整价值链</p>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">🎓</div>
+                    <h3>技术领先</h3>
+                    <p>依托实验室前沿研究，保持技术先进性</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">🔬</div>
+                    <h3>研发实力</h3>
+                    <p>工程中心提供强大的系统集成能力</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">🚀</div>
+                    <h3>快速转化</h3>
+                    <p>中科华芯实现研究成果快速产业化</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">💼</div>
+                    <h3>市场导向</h3>
+                    <p>以客户需求驱动技术研发方向</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>期待与您合作</h2>
+                <p>无论您是寻求技术合作、项目咨询，还是想了解我们的解决方案，我们都欢迎与您的交流。</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">联系我们</a>
+                    <a href="index.html" class="btn btn-secondary">返回首页</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer-glass">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>工业智能体 AI</h4>
+                    <p>驱动工业自动化的未来</p>
+                    <div class="footer-desc">
+                        基于大语言模型与开源工具链，<br>构建可落地的工业智能工作流系统
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="architecture.html">系统架构</a></li>
+                        <li><a href="industrial-agent.html">什么是工业智能体</a></li>
+                        <li><a href="getting-started.html">开始使用</a></li>
+                        <li><a href="index.html#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>技术支持</h4>
+                    <ul>
+                        <li><a href="#">文档中心</a></li>
+                        <li><a href="#">API 参考</a></li>
+                        <li><a href="https://github.com/ClawDeckX/ClawDeckX" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 中科华芯（东莞）有限公司。保留所有权利.</p>
+                <p class="footer-tech">Powered by <a href="http://192.168.10.231:18800" target="_blank">ClawDeckX</a> + LLM + Open Source Tools</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/global-nav.js"></script>
+    <script src="js/effects.js"></script>
+</body>
+</html>

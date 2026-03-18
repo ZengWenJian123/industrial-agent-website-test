@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工业智能体 AI - 驱动工业自动化的未来</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 粒子背景画布 -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🤖</span>
+                <span class="logo-text">工业智能体 AI</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="industrial-agent.html">什么是工业智能体</a></li>
+                <li><a href="getting-started.html">开始使用</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主页横幅 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>2026 全新发布</span>
+                </div>
+                <h1 class="hero-title">AI 驱动的<br><span class="highlight">工业自动化新范式</span></h1>
+                <p class="hero-subtitle">基于大语言模型与开源工具链，构建可落地的工业智能工作流系统</p>
+                
+                <!-- 技术标签 -->
+                <div class="tech-tags">
+                    <span class="tech-tag">🧠 LLM 大模型</span>
+                    <span class="tech-tag">⚙️ 开源工具链</span>
+                    <span class="tech-tag">🔄 工作流引擎</span>
+                    <span class="tech-tag">📊 数据可视化</span>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">
+                        <span>了解更多</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">预约演示</a>
+                </div>
+                
+                <!-- 统计数据 -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="50">0</div>
+                        <div class="stat-label">目标客户</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="3">0</div>
+                        <div class="stat-label">产品线</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="200">0</div>
+                        <div class="stat-label">案例库</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="99">0</div>
+                        <div class="stat-label">自动化率%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="ai-visual">
+                    <!-- 3D 旋转立方体 -->
+                    <div class="cube-container">
+                        <div class="cube">
+                            <div class="face front">AI</div>
+                            <div class="face back">IoT</div>
+                            <div class="face right">Data</div>
+                            <div class="face left">Flow</div>
+                            <div class="face top">Cloud</div>
+                            <div class="face bottom">Edge</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页面导航 -->
+    <section class="page-navigation">
+        <div class="container">
+            <h2 class="section-title">探索更多</h2>
+            <p class="section-subtitle">深入了解我们的团队和工业智能体技术</p>
+            
+            <div class="nav-cards">
+                <a href="about.html" class="nav-card">
+                    <div class="nav-card-icon">🏢</div>
+                    <h3>关于我们</h3>
+                    <p>了解中科华芯、松山湖材料实验室和大湾区智能传感器工程中心的产学研合作体系</p>
+                    <div class="nav-card-footer">
+                        <span>查看详情</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </a>
+                
+                <a href="industrial-agent.html" class="nav-card">
+                    <div class="nav-card-icon">🤖</div>
+                    <h3>什么是工业智能体</h3>
+                    <p>探索 AI 驱动的新一代工业自动化系统，了解技术架构、应用场景和核心价值</p>
+                    <div class="nav-card-footer">
+                        <span>学习更多</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </a>
+                
+                <a href="getting-started.html" class="nav-card featured">
+                    <div class="nav-card-icon">🚀</div>
+                    <h3>开始使用</h3>
+                    <p>快速接入 n8n 工作流平台，创建您的第一个工业自动化工作流</p>
+                    <div class="nav-card-footer">
+                        <span>立即体验</span>
+                        <span class="arrow">→</span>
+                    </div>
+                    <div class="new-badge">新</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">项目愿景</h2>
+            <div class="section-subtitle">探索 AI 与工业自动化的深度融合</div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>我们致力于探索 <strong>AI 驱动的数据处理流程与工业自动化项目</strong> 的可行性，通过整合先进的大语言模型技术和开源工具链，为制造业打造智能化、自动化的解决方案。</p>
+                    <p>团队基于现有能力搭建演示环境，整合模拟数据与工作流平台实现可视化，并探索本地与云端模型协同的部署策略，为后续项目正式启动做好充分的技术准备。</p>
+                    
+                    <!-- 项目特点列表 -->
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎯</span>
+                            <div>
+                                <h4>可落地的工作流系统</h4>
+                                <p>从概念到实践，打造真正可用的工业自动化解决方案</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🔗</span>
+                            <div>
+                                <h4>本地与云端协同</h4>
+                                <p>灵活的部署策略，兼顾数据安全与计算能力</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">📈</span>
+                            <div>
+                                <h4>可视化数据流</h4>
+                                <p>实时监控、智能分析、直观展示</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 物理效果展示区 -->
+                <div class="physics-demo">
+                    <div class="physics-container">
+                        <div class="floating-element" data-speed="1">🔮</div>
+                        <div class="floating-element" data-speed="2">⚡</div>
+                        <div class="floating-element" data-speed="3">🌟</div>
+                        <div class="floating-element" data-speed="1">💫</div>
+                        <div class="floating-element" data-speed="2">🌀</div>
+                    </div>
+                    <div class="physics-label">
+                        <span>物理引擎驱动</span>
+                        <span>动态交互效果</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心能力 -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">核心能力</h2>
+            <div class="section-subtitle">六大核心技术支柱</div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">🧠</div>
+                    <h3>大语言模型集成</h3>
+                    <p>利用先进的 LLM 技术实现自然语言交互、智能决策和自动化任务执行</p>
+                    <div class="feature-tech">Qwen • GPT • Claude</div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">⚙️</div>
+                    <h3>开源工具链</h3>
+                    <p>基于成熟的开源生态构建灵活、可扩展的工业自动化解决方案</p>
+                    <div class="feature-tech">n8n • Node-RED • Home Assistant</div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">🔄</div>
+                    <h3>工作流引擎</h3>
+                    <p>可视化工作流编排，支持复杂业务流程的自动化执行与监控</p>
+                    <div class="feature-tech">BPMN • 可视化编排</div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">📈</div>
+                    <h3>数据处理管道</h3>
+                    <p>高效的数据采集、清洗、分析和可视化，实现数据驱动的决策</p>
+                    <div class="feature-tech">ETL • 实时流处理</div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">🌐</div>
+                    <h3>云地协同部署</h3>
+                    <p>灵活的部署策略，支持本地私有化部署与云端服务的无缝协同</p>
+                    <div class="feature-tech">Docker • K8s • 边缘计算</div>
+                </div>
+                <div class="feature-card" data-tilt>
+                    <div class="feature-icon">🛡️</div>
+                    <h3>安全与合规</h3>
+                    <p>企业级安全保障，符合工业数据安全和隐私保护要求</p>
+                    <div class="feature-tech">加密 • 审计 • 权限控制</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作流程 -->
+    <section id="workflow" class="workflow">
+        <div class="container">
+            <h2 class="section-title">AI 驱动的工作流程</h2>
+            <div class="section-subtitle">从数据到智能决策的完整闭环</div>
+            
+            <div class="workflow-timeline">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>数据采集</h3>
+                        <p>从工业设备、传感器和系统中采集实时数据</p>
+                        <div class="step-tech">MQTT • OPC-UA • Modbus</div>
+                    </div>
+                    <div class="step-glow"></div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>智能处理</h3>
+                        <p>利用 LLM 进行数据理解、分类和智能分析</p>
+                        <div class="step-tech">NLP • 语义理解 • 意图识别</div>
+                    </div>
+                    <div class="step-glow"></div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>工作流编排</h3>
+                        <p>基于规则和业务逻辑自动化执行任务流程</p>
+                        <div class="step-tech">自动化触发 • 条件分支</div>
+                    </div>
+                    <div class="step-glow"></div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>可视化展示</h3>
+                        <p>通过仪表盘和报表实时展示关键指标和状态</p>
+                        <div class="step-tech">Grafana • 自定义仪表盘</div>
+                    </div>
+                    <div class="step-glow"></div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>持续优化</h3>
+                        <p>基于反馈和数据分析不断优化工作流程</p>
+                        <div class="step-tech">机器学习 • A/B 测试</div>
+                    </div>
+                    <div class="step-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目特点 -->
+    <section class="highlights">
+        <div class="container">
+            <h2 class="section-title">项目特点</h2>
+            <div class="section-subtitle">为什么选择我们的解决方案</div>
+            
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-number">01</div>
+                    <div class="highlight-content">
+                        <h3> 快速部署</h3>
+                        <p>基于成熟的开源工具链，可在数小时内完成基础环境搭建</p>
+                        <ul class="highlight-list">
+                            <li>✓ 预配置 Docker 镜像</li>
+                            <li>✓ 一键部署脚本</li>
+                            <li>✓ 标准化 API 接口</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-number">02</div>
+                    <div class="highlight-content">
+                        <h3>💰 成本效益</h3>
+                        <p>开源方案大幅降低软件成本，按需选择云端模型服务</p>
+                        <ul class="highlight-list">
+                            <li>✓ 零许可费用</li>
+                            <li>✓ 弹性计费模式</li>
+                            <li>✓ 硬件要求低</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-number">03</div>
+                    <div class="highlight-content">
+                        <h3>🔧 高度可定制</h3>
+                        <p>模块化设计支持灵活扩展，根据业务需求自由组合</p>
+                        <ul class="highlight-list">
+                            <li>✓ 插件化架构</li>
+                            <li>✓ 自定义工作流</li>
+                            <li>✓ 开放 API</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-number">04</div>
+                    <div class="highlight-content">
+                        <h3>📚 知识沉淀</h3>
+                        <p>161+ 传感器案例库，10+ 学术论文支撑</p>
+                        <ul class="highlight-list">
+                            <li>✓ 行业最佳实践</li>
+                            <li>✓ 技术文档完善</li>
+                            <li>✓ 持续更新</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 部署方案 -->
+    <section id="deployment" class="deployment">
+        <div class="container">
+            <h2 class="section-title">部署方案</h2>
+            <div class="section-subtitle">灵活适配不同场景需求</div>
+            
+            <div class="deployment-options">
+                <div class="deployment-card">
+                    <div class="deployment-header">
+                        <h3>🖥️ 本地部署</h3>
+                    </div>
+                    <ul class="deployment-features">
+                        <li>✅ 数据完全私有化</li>
+                        <li>✅ 低延迟响应</li>
+                        <li>✅ 离线运行能力</li>
+                        <li>✅ 符合数据主权要求</li>
+                        <li class="deployment-spec">适合：数据敏感场景</li>
+                    </ul>
+                </div>
+                <div class="deployment-card featured">
+                    <div class="deployment-header">
+                        <h3>☁️ 云端部署</h3>
+                        <span class="featured-badge">推荐</span>
+                    </div>
+                    <ul class="deployment-features">
+                        <li>✅ 弹性扩展能力</li>
+                        <li>✅ 最新模型支持</li>
+                        <li>✅ 无需硬件投入</li>
+                        <li>✅ 自动更新维护</li>
+                        <li class="deployment-spec">适合：快速启动/中小规模</li>
+                    </ul>
+                </div>
+                <div class="deployment-card">
+                    <div class="deployment-header">
+                        <h3>🔄 混合部署</h3>
+                    </div>
+                    <ul class="deployment-features">
+                        <li>✅ 敏感数据本地处理</li>
+                        <li>✅ 复杂计算云端执行</li>
+                        <li>✅ 最佳成本效益</li>
+                        <li>✅ 灵活的资源调配</li>
+                        <li class="deployment-spec">适合：大型企业/混合云</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 演示环境 -->
+    <section class="demo">
+        <div class="container">
+            <div class="demo-content">
+                <div class="demo-badge">🎯 即将上线</div>
+                <h2>演示环境</h2>
+                <p>我们正在搭建整合模拟数据与工作流平台的可视化演示环境，让您亲身体验工业智能体的强大能力。</p>
+                <div class="demo-features">
+                    <div class="demo-feature">
+                        <span class="check">✓</span>
+                        <span>模拟工业数据流</span>
+                    </div>
+                    <div class="demo-feature">
+                        <span class="check">✓</span>
+                        <span>可视化工作流编排</span>
+                    </div>
+                    <div class="demo-feature">
+                        <span class="check">✓</span>
+                        <span>实时数据仪表盘</span>
+                    </div>
+                    <div class="demo-feature">
+                        <span class="check">✓</span>
+                        <span>AI 智能决策展示</span>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn-primary demo-btn">预约演示</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="section-subtitle">期待与您合作，共创工业智能未来</div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>期待与您合作</h3>
+                    <p>如果您对我们的工业智能体解决方案感兴趣，欢迎联系我们获取更多信息或预约演示。</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="icon">📧</span>
+                            <span>contact@industrial-agent.ai</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <span>广东东莞松山湖</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">🏢</span>
+                            <span>中科华芯（东莞）有限公司</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 社交媒体 -->
+                    <div class="social-links">
+                        <a href="#" class="social-link">💬</a>
+                        <a href="#" class="social-link">📱</a>
+                        <a href="#" class="social-link">🌐</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="公司名称">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="您的需求或问题" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>工业智能体 AI</h4>
+                    <p>驱动工业自动化的未来</p>
+                    <div class="footer-desc">
+                        基于大语言模型与开源工具链，<br>构建可落地的工业智能工作流系统
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#features">核心能力</a></li>
+                        <li><a href="#workflow">工作流程</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>技术支持</h4>
+                    <ul>
+                        <li><a href="#">文档中心</a></li>
+                        <li><a href="#">API 参考</a></li>
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 工业智能体 AI. 保留所有权利.</p>
+                <p class="footer-tech">Powered by LLM + Open Source Tools</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
