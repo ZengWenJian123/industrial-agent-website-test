@@ -1,6 +1,6 @@
 # 工业智能体 AI 官网
 
-一个现代化的工业智能体 AI 项目官方网站，用于介绍 AI 驱动的工业自动化解决方案。
+一个现代化的工业智能体 AI 项目官方介绍网站，用于介绍 AI 驱动的工业自动化解决方案。
 
 ## 📁 项目结构
 
@@ -22,7 +22,7 @@ industrial-agent-website/
 
 ```bash
 # 进入项目目录
-cd ./industrial-agent-website
+cd ./industrial-agent-website-test
 
 # 启动服务器
 python3 server.py
@@ -146,7 +146,7 @@ MIT License - 可自由使用和修改
 ## 🤝 技术支持
 
 如有问题或建议，请联系：
-- 📧 contact@industrial-agent.ai
+- 📧 zengwenjian@innotitan.com
 - 📍 广东东莞松山湖
 
 ---
